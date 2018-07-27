@@ -1,0 +1,440 @@
+@charset "utf-8";
+* {
+    padding: 0;
+
+}
+
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+    background-color: #EDEEE6;
+}
+
+form {
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+}
+
+.top {
+    margin: 30px auto;
+}
+
+.body {
+    min-height: 100%;
+    overflow: auto;
+    *display: block;
+    *height: 100%;
+    *overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+li {
+    list-style-position: inside;
+}
+
+.small {
+    font-size: 10px;
+    color: red;
+}
+
+.titulo {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px;
+
+}
+
+.titulo2 {
+    font-size: 14px;
+    text-align: center;
+    background-color: #CA0606;
+    color: #FFF;
+    padding: 3px;
+}
+
+.titles {
+    margin: 10px;
+}
+
+.title_resume {
+    font-size: 17px;
+    text-align: center;
+    color: #51749E;
+}
+
+.links_menu {
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu {
+    margin: 30px auto;
+    color: #fff;
+    padding: 10px;
+    background-color: rgb(46, 160, 59);
+    background-image: url(../images/bg_menu.png);
+}
+
+.menu a, .menu span {
+    color: #fff;
+}
+
+.bgsubmenu {
+    margin: 10px auto;
+}
+
+.submenu {
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/submenu.png);
+    text-decoration: none;
+    background-repeat: no-repeat;
+    display: block;
+
+}
+
+.submenu:hover {
+    opacity: 0.8;
+}
+
+.head_table {
+    background-color: #51749E;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.tr_table {
+    background-color: #DDD;
+    color: #51749E;
+    font-size: 12px;
+    text-align: left;
+}
+
+.tr_table:hover {
+    background-color: #7F96B3;
+    color: #FFF
+}
+
+
+.td_table {
+    padding: 3px;
+}
+
+.texto {
+    color: #51749E;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left;
+    margin-right: 20px;
+    margin-left: 10px;
+    line-height: 1.5;
+}
+
+.texto2 {
+    color: #FFF;
+    font-size: 11px;
+    text-align: center;
+    height: 17px;
+    padding: 4px;
+}
+
+.texto3 {
+    color: #51749E;
+    font-size: 11px;
+    text-align: right;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+.texto4, .texto5 {
+    overflow: hidden;
+    margin-left: -9999px;
+}
+
+.texto6 {
+    color: #777;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.texto7 {
+    color: #51749E;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 1.5;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.texto8 {
+    font-weight: bold;
+    background-color: #D1DCE7;
+    color: #51749E;
+    padding: 3px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.texto9 {
+    color: #51749E;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.texto10 {
+    color: #51749E;
+    font-size: 11px;
+    text-align: left;
+}
+
+.submit {
+    margin: auto;
+    background-color: #519E57;
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFF;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #333;
+    width: 200px;
+}
+
+.submit:hover {
+    background-color: #CA0606;
+}
+
+.jump {
+    padding: 3px;
+    border: 1px solid #51749E;
+    color: #51749E;
+    font-size: 12px;
+    margin: 5px 5px;
+}
+
+.bloco {
+    border-color: #51749E;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 20px;
+}
+
+.input {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #413C3C;
+    font-size: 11px;
+    background-color: #E9E9E9;
+    border-color: #535050;
+    border-style: solid;
+    border-width: 1px;
+    margin: 5px 5px;
+    text-align: left;
+    height: 14px;
+    padding: 4px;
+}
+
+.input_msg {
+    padding: 5px;
+    background-color: #E9E9E9;
+    border: 1px solid #535050;
+    margin: 5px;
+    color: #413C3C;
+    outline: none;
+    resize: none;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    width: 350px;
+    overflow: auto;
+}
+
+.input_file {
+    color: #FFF;
+    padding: 5px;
+    margin: 5px;
+    width: 352px;
+    background: rgb(0, 128, 192); /* Old browsers */
+    background: linear-gradient(to bottom, rgba(129, 170, 125, 1) 0%, rgba(23, 63, 4, 1) 100%); /* W3C */
+}
+
+.tema_desc {
+    cursor: pointer;
+}
+
+.tema_desc img {
+    margin: 0px 0px 7px 0px;
+    vertical-align: middle;
+}
+
+.input_radio {
+    margin: 5px;
+}
+
+.msg_notfound {
+    padding: 10px;
+    color: red;
+    font-size: 13px;
+}
+
+.center {
+    text-align: center;
+}
+
+.table, .table2 {
+    background-color: #FFF;
+    width: 785px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #777;
+    margin: 0px auto 30px;
+}
+
+.table2 {
+    width: 570px;
+}
+
+.table_login {
+    width: 350px;
+}
+
+.subpainel {
+    background-position: 0px 0px;
+}
+
+.subfacul {
+    background-position: -46px 0px;
+}
+
+.subsem {
+    background-position: -91px 0px;
+}
+
+.subdis {
+    background-position: -136px 0px;
+}
+
+.subtem {
+    background-position: -181px 0px;
+}
+
+.sublog {
+    background-position: -226px 0px;
+}
+
+.subres {
+    background-position: -268px 0px;
+}
+
+.botao {
+    text-decoration: none;
+    width: 112px;
+    height: 110px;
+    background-image: url(../images/buttons.png);
+    background-repeat: no-repeat;
+    display: block;
+    margin: 6px;
+    float: left;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+.cadcat {
+    background-position: 0px 0px;
+}
+
+.cadsub {
+    background-position: -136px 0px;
+}
+
+.cadaut {
+    background-position: -272px -1px;
+}
+
+.cadliv {
+    background-position: -405px -1px
+}
+
+.cadlog {
+    background-position: -540px -1px
+}
+
+.cadres {
+    background-position: -669px -1px
+}
+
+.listcat {
+    background-position: 0px -131px;
+}
+
+.listsub {
+    background-position: -135px -131px;
+}
+
+.listaut {
+    background-position: -271px -131px;
+}
+
+.listliv {
+    background-position: -406px -130px;
+}
+
+.listlog {
+    background-position: -541px -131px;
+}
+
+.listres {
+    background-position: -669px -131px;
+}
+
+.clearFloat {
+    clear: both;
+}
+
+.thumb {
+    float: left;
+    width: 128px;
+    height: 96px;
+    margin: 0px 9px 20px 0px;
+}
+
+.copy-right {
+    margin: 0px auto;
+    color: #777;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    clear: both;
+}
+
+.copy-right a {
+    color: #777;
+    font-weight: bold;
+}
