@@ -4,19 +4,31 @@
 	      <div class="background gradiente">
 	        
 	      </div>
+	      <!--FOTO DO USUÁRIO-->
 	      <a href=""><img class="circle" src="{{$user->photo}}"></a>
+	      <!--NOME DO USUÁRIO-->
 	      <a href=""><span class="white-text name">{{$aluno->nome}}</span></a>
+	      <!--FACULDADE DO USUÁRIO-->
 	      <a href=""><span class="white-text email">{{$aluno->faculdade}}</span></a>
 	    </div></li>
+
+	    <!--IR PARA HOME-->
 	    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+
+	    <!--EDITAR O USUÁRIO-->
 	    <li><a href="/edituser/{{$aluno->id}}"><i class="material-icons">settings</i>Opções</a></li>
+	     <!--MAT~ERIAS DO USUÁRIO-->
 	    <li><div class="divider"></div></li>
 	    <li><a class="subheader"><i class="material-icons">book</i>Matérias</a></li>
+	     <!--LOOP DE TURMAS-->
 	    	@forelse($aluno->turma() as $turma)
+	    	 <!--LISTAR TEMAS DA TURMA X-->
 	 		<li><a class="waves-effect" href="/resumos/{{$turma->id}}">{{$turma->materia->nome}}</a></li>
 	 		@empty
 	 		<li>Sem matérias cadastradas</li>
 	 		@endforelse
+
+	 		 <!--LOGOUT-->
 	 	<li><a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
