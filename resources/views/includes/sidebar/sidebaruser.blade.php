@@ -5,7 +5,13 @@
 	        
 	      </div>
 	      <!--FOTO DO USUÁRIO-->
-	      <a href=""><img class="circle" src="{{$user->photo}}"></a>
+	      <a href="">
+	      	@if ($user->photo != null)
+		    	<img src="{{$user->photo}}" alt="" class="circle responsive-img">
+		    @else
+		    	<img src="{{asset('/image/imagem.png')}}" alt="" class="circle responsive-img">
+		    @endif
+	      </a>
 	      <!--NOME DO USUÁRIO-->
 	      <a href=""><span class="white-text name">{{$aluno->nome}}</span></a>
 	      <!--FACULDADE DO USUÁRIO-->

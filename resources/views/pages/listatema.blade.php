@@ -1,11 +1,12 @@
-<main>
-	<h3 class="center-align">Seja bem vindo ao sistema de controle de tarefas</h3>
-	<p>Suspendisse sollicitudin non quam vitae iaculis. Quisque dui quam, varius ut leo eget, volutpat fermentum sem.</p>
-
-	<div class="row">
+@extends('layout/default')
+@section('content')
+<div class="row">
+	<h3>Todos os Temas</h3>
+</div>
+<div class="row">
 		 <ul class="collection">
 		 	<!--LOOP PELOS TEMAS Recentes-->
-		 	@foreach($temas->recentes() as $tema)
+		 	@foreach($temas as $tema)
 		    <li class="collection-item avatar">
 		    	<div class="row">
 		    		<div class="col s1">
@@ -40,7 +41,4 @@
 		    @endforeach
 		</ul>
 	</div>
-	<div class="row">
-		<a href="/tema" class="waves-effect waves-teal btn-flat">Ver Todos</a>
-	</div>
-</main>
+	@stop
