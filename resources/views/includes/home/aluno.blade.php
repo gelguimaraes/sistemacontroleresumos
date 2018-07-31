@@ -5,14 +5,14 @@
 	<div class="row">
 		 <ul class="collection">
 		 	<!--LOOP PELOS TEMAS Recentes-->
-		 	@foreach($temas->recentes() as $tema)
+		 	@foreach($temas as $tema)
 		    <li class="collection-item avatar">
 		    	<div class="row">
 		    		<div class="col s1">
 		    			@if ($thema->admin->photo != null)
 		    			 	<img src="{{$tema->admin->photo}}" alt="" class="circle responsive-img">
 		    			@else
-		    				<img src="{{asset('/image/imagem.png')}}" alt="" class="circle responsive-img">
+		    				<img src="{{asset('/images/imagem.png')}}" alt="" class="circle responsive-img">
 		    			@endif
 		    		</div>
 		    		<div class="col s9">

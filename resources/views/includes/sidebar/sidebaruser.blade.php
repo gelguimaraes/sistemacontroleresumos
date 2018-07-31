@@ -6,20 +6,19 @@
 	      </div>
 	      <!--FOTO DO USUÁRIO-->
 	     @php
-	     	$aluno = Aluno::has('user_id', '==', $user->id)->get();
-	     	$turmas = Turma::has('aluno', '==', $aluno->id)->get();
+
+		   // print $user->id;
+	     	$aluno = \App\Aluno::where('user_id', $user->id)->first();
+	     	//print $aluno -> id;
+	     	$turmas = \App\Turma::where('aluno_id', $aluno->id)->get();
+		 	//print $turmas
 	     @endphp
-	      <a href="">
-		  <{{--	@if ($user->photo != null)
-		    	//<img src="{{$user->photo}}" alt="" class="circle responsive-img">
-		   // @else  --}}
-		    	<img src="{{asset('/image/imagem.png')}}" alt="" class="circle responsive-img">
-			{{--@endif --}}
-			</a>
+	    	<img src="{{asset('/images/image.png')}}" alt="" class="circle responsive-img"/>
+
 			<!--NOME DO USUÁRIO-->
 			<a href=""><span class="white-text name">{{$user->name}}</span></a>
-			<!--FACULDADE DO USUÁRIO
-			<a href=""><span class="white-text email">{{$user->faculdade}}</span></a>-->
+			<!--FACULDADE DO USUÁRIO -->
+			<a href=""><span class="white-text email">{{$user->faculdade}}</span></a>
 			</div></li>
 
 			<!--IR PARA HOME-->
@@ -31,12 +30,12 @@
 			<li><div class="divider"></div></li>
 			<li><a class="subheader"><i class="material-icons">book</i>Matérias</a></li>
 			<!--LOOP DE TURMAS-->
-			 @forelse($user->aluno()->turma() as $turma)
-			  <!--LISTAR TEMAS DA TURMA X-->
-			  <li><a class="waves-effect" href="/resumos/{{$turma->id}}">{{$turma->materia->nome}}</a></li>
-			  @empty
-			  <li>Sem matérias cadastradas</li>
-			  @endforelse
+			 @forelse($turmas as $turma)
+				 <!--LISTAR TEMAS DA TURMA X-->
+					 <li><a class="waves-effect" href="/resumos/{{$turma->id}}">{{$turma->materia->nome}}</a></li>
+				 @empty
+					 <li>Sem matérias cadastradas</li>
+			 @endforelse
 
 			   <!--LOGOUT-->
 			<li><a href="{{ route('logout') }}"

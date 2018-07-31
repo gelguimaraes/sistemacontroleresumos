@@ -5,7 +5,7 @@
             <h2 class="header">Login</h2>
             <div class="card horizontal">
                 <div class="card-image">
-                    <img src="image.png">
+                    <img src="{{asset('/images/image.png')}}">
                 </div>
                 <div class="card-stacked">
                     <form  method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
