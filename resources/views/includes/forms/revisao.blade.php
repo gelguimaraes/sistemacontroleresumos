@@ -29,7 +29,7 @@
               <p class="range-field">
                 <input type="range" id="nota" min="0" max="100" />
               </p>
-              <button type="submit" name="submitbt" value="foo" class="waves-effect waves-light btn center"> 
+              <button type="submit" name="submitbt" value="foo" class="waves-effect waves-light btn center">
                     <i class="material-icons left">send</i>Enviar
                </button>
             </form>

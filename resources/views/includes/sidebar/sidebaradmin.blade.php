@@ -5,7 +5,14 @@
 	        
 	      </div>
 	      <!--FOTO DO USUÁRIO-->
-	      <a href=""><img class="circle" src="{{$user->photo}}"></a>
+	      <a href="">
+	      	@if ($admin->photo != null)
+		    	<img src="{{$admin->photo}}" alt="" class="circle responsive-img">
+		    @else
+		    	<img src="{{asset('/image/imagem.png')}}" alt="" class="circle responsive-img">
+		    @endif
+	      	
+	      </a>
 	      <!--NOME DO USUÁRIO-->
 	      <a href=""><span class="white-text name">{{$user->nome}}</span></a>
 	      

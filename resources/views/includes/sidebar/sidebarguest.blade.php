@@ -4,7 +4,7 @@
 	      <div class="background gradiente">
 	        
 	      </div>
-	      <a href="/"><img class="circle" src="{{asset('images/logo.png')}}"></a>
+	      <a href="/"><img class="circle" src="{{asset('images/imagem.png')}}"></a>
 	      <a href="/"><span class="white-text name">Visitante</span></a>
 	      
 	    </div></li>
