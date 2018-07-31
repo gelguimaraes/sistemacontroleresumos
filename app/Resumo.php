@@ -21,7 +21,7 @@ class Resumo extends Model
      * @param $texto
      * @param $tema
      */
-    public function __construct(\App\Materia $materia, string $nome, \App\Aluno $aluno, string $texto, string $tema)
+    public function __construct(\App\Materia $materia, string $nome, \App\Aluno $aluno, string $texto, \App\Tema $tema)
     {
         $this->materia = $materia;
         $this->nome = $nome;
@@ -39,6 +39,10 @@ class Resumo extends Model
 
     public function materia(){
         return $this->hasOne('\App\Materia','materia_id','id');
+    }
+
+    public function tema(){
+        return $this->hasOne('\App\Tema','tema_id','id');
     }
 
 }

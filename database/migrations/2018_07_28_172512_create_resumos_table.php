@@ -15,10 +15,13 @@ class CreateResumosTable extends Migration
     {
         Schema::create('resumos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();$table->integer('materia_id')->unsigned();
+            $table->timestamps();
+            $table->integer('materia_id')->unsigned();
             $table->foreign('materia_id')->references('id')->on('materias');
             $table->integer('aluno_id')->unsigned();
             $table->foreign('aluno_id')->references('id')->on('alunos');
+            $table->integer('tema_id')->unsigned();
+            $table->foreign('tema_id')->references('id')->on('temas');
 
         });
     }
