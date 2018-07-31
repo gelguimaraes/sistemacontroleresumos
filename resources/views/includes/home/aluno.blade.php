@@ -4,13 +4,20 @@
 
 	<div class="row">
 		 <ul class="collection">
+		 	@php
+
+		   
+	     	//print $aluno -> id;
+	     	$temas = \App\Tema::get();
+		 	//print $turmas
+	     @endphp
 		 	<!--LOOP PELOS TEMAS Recentes-->
 		 	@foreach($temas as $tema)
 		    <li class="collection-item avatar">
 		    	<div class="row">
 		    		<div class="col s1">
-		    			@if ($thema->admin->photo != null)
-		    			 	<img src="{{$tema->admin->photo}}" alt="" class="circle responsive-img">
+		    			@if ($tema->admin()->first()->photo != null)
+		    			 	<img src="{{$tema->admin()->get()->photo}}" alt="" class="circle responsive-img">
 		    			@else
 		    				<img src="{{asset('/images/imagem.png')}}" alt="" class="circle responsive-img">
 		    			@endif
@@ -20,9 +27,9 @@
 					      <p class="smaller-print">
 
 					      	<!--TEMAS DO MESMO PROFESSOR-->
-					      	<b><a href="/professor/{{$tema->admin->id}}">{{$tema->admin->name}}</a></b> -  
+					      	<b><a href="/professor/{{$tema->admin()->get()->id}}">{{$tema->admin->name}}</a></b> -  
 					      	<!--TEMAS DA MESMA MATERIA-->
-					      	<b><a href="/materia/{{$tema->materia->id}}">{{$tema->materia->name}}</a></b>
+					      	<b><a href="/materia/{{$tema->materia()->get()->id}}">{{$tema->materia->name}}</a></b>
 					      	<br>
 					      	<!--DATA DE POSTAGEM-->
 					        	{{$tema->data}}
@@ -32,7 +39,7 @@
 		    		</div>
 		    		 <!--EDITAR OU ENVIAR UM RESUMO-->
 		    		<div class="col s2">
-		    			<a href="/resumo/{{$resumo->id}}"><i class="material-icons">edit</i></a>
+		    			<a href="/resumo/{{$tema->resumo()->get()->id}}"><i class="material-icons">edit</i></a>
 		    			<a href="/resumo/"><i class="material-icons">add_circle_outline</i></a>
 		    		</div>
 		    	</div>

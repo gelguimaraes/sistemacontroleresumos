@@ -2,12 +2,18 @@
 	 <ul id="slide-out" class="sidenav sidenav-fixed">
 	    <li><div class="user-view">
 	      <div class="background gradiente">
-	        
+	        @php
+
+		  
+	     	//print $aluno -> id;
+	     	$turmas = \App\Turma::where('admin', $user->id)->get();
+		 	//print $turmas
+	     @endphp
 	      </div>
 	      <!--FOTO DO USUÁRIO-->
 	      <a href="">
-	      	@if ($admin->photo != null)
-		    	<img src="{{$admin->photo}}" alt="" class="circle responsive-img">
+	      	@if ($user->photo != null)
+		    	<img src="{{$user->photo}}" alt="" class="circle responsive-img">
 		    @else
 		    	<img src="{{asset('/image/imagem.png')}}" alt="" class="circle responsive-img">
 		    @endif
@@ -27,7 +33,7 @@
 	    <!--LOOP DE TURMAS-->
 	    	@forelse($user->turma() as $turma)
 	    	 <!--LISTAR TEMAS DA TURMA X-->
-	 		<li><a class="waves-effect" href="/resumos/{{$turma->id}}">{{$turma->materia->nome}}</a></li>
+	 		<li><a class="waves-effect" href="/resumos/{{$turma->id}}">{{$turma->materia()->get()->nome}}</a></li>
 	 		@empty
 	 		<li>Sem matérias cadastradas</li>
 	 		@endforelse
