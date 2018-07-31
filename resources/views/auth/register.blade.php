@@ -40,6 +40,16 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="faculdade" class="col-md-4 col-form-label text-md-right">Faculdade</label>
+
+                            <div class="col-md-6">
+                                <input id="faculdade" type="text" class="form-control" name="faculdade" value="{{ old('faculdade') }}" >
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

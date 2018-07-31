@@ -12,8 +12,8 @@ class ControllerAdmin extends Controller
         return view("home/aluno");
     }
 
-    public function add(){
-        
+    public function add($id){
+
 
 
     }

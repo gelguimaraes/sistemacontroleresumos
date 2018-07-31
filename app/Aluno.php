@@ -9,22 +9,20 @@ class Aluno extends Model
     protected $aluno;
     protected $faculdade;
     protected $id;
+    protected $user_id;
 
-   protected $fillable = ['aluno', 'faculdade','id'];
+   protected $fillable = ['faculdade','user_id'];
 
     /**
      * Aluno constructor.
      * @param $aluno
      * @param $faculdade
      */
-    public function __construct(\App\User $aluno, string $faculdade,
-                                string $name, string $login, string $email, string $password,
-                                string $photo, boolean $isAdmin){
-        parent::__construct($name, $login, $email, $password, $photo, $isAdmin);
-
-        $this->aluno = $aluno;
-        $this->faculdade = $faculdade;
-    }
+//    public function __construct(string $faculdade, int $user_id){
+//       // parent::__construct($name, $login, $email, $password, $photo, $isAdmin);
+//        $this -> user_id = $user_id;
+//        $this->faculdade = $faculdade;
+//    }
 
     public function user(){
         return $this->morphOne(\App\User::class, 'userable');
