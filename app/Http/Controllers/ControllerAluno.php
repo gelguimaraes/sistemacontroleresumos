@@ -9,8 +9,10 @@ class ControllerAdmin extends Controller
 
 
     public function createForm(){
-        return view("home/admin");
+        return view("home/aluno");
     }
+
+
 
 
 }

@@ -20,15 +20,11 @@ Route::get('/', function () {
 Route::post('resumo', 'ControllerResumo@createForm');
 
 
-Route:: group(['prefix' => 'admin'], function(){
+Route:: group(['prefix' => 'admin', 'midleware' =>'auth'], function(){
 
-//    Route::post('addFaculdade', 'ControllerResumo@add');
-//    Route::delete('deleteFaculdade/{id}', 'ControllerResumo@delete');
+
 //    Route::get('getFaculdade/{id}', 'ControllerResumo@get');
-//    Route::get('listFaculdade', 'ControllerResumo@list');
-//    Route::get('formFaculdade', 'ControllerResumo@createForm');
-//    Route::put('updadeFaculdade/{id}', 'ControllerResumo@update');
-//    Route::get('editFormFaculdade/{id}', 'ControllerResumo@edit');
+
 
  //Index
     Route:: get('/', 'ControllerAdmin@createForm');
