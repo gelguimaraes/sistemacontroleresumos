@@ -6,20 +6,14 @@
 <body>
 <div class="container">
 
-    <aside>
         @include('includes.sidebar')
-    </aside>
-
-    <div id="main" class="row">
-
+        <div class="wrapper">
             @yield('content')
 
-    </div>
-
-    <footer class="row">
-        @include('includes.footer')
-    </footer>
-
+          
+        </div>
+        
+  @include('includes.footer')
 </div>
 </body>
 </html>

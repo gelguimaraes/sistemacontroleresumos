@@ -4,24 +4,33 @@
 	      <div class="background gradiente">
 	        
 	      </div>
+	      <!--FOTO DO USUÁRIO-->
 	      <a href=""><img class="circle" src="{{$user->photo}}"></a>
+	      <!--NOME DO USUÁRIO-->
 	      <a href=""><span class="white-text name">{{$user->nome}}</span></a>
 	      
 	    </div></li>
+	    <!--IR PARA HOME-->
 	    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+	    <!--EDITAR O USUÁRIO-->
 	    <li><a href="/edituser/{{$user->id}}"><i class="material-icons">settings</i>Opções</a></li>
+	    <!--MAT~ERIAS DO USUÁRIO-->
 	    <li><div class="divider"></div></li>
 	    <li><a class="subheader"><i class="material-icons">book</i>Matérias</a></li>
+	    <!--LOOP DE TURMAS-->
 	    	@forelse($user->turma() as $turma)
+	    	 <!--LISTAR TEMAS DA TURMA X-->
 	 		<li><a class="waves-effect" href="/resumos/{{$turma->id}}">{{$turma->materia->nome}}</a></li>
 	 		@empty
 	 		<li>Sem matérias cadastradas</li>
 	 		@endforelse
+	 		 <!--ADCIONAR NOVO TEMA-->
 	 		<li>
 	 			<a class="waves-effect" href="/addturma">
 	 				<i class="material-icons">add_circle_outline</i>Nova Matéria
 	 			</a>
 	 		</li>
+	 		 <!--LOGOUT-->
 	 		<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

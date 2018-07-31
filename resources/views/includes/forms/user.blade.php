@@ -1,8 +1,16 @@
 <div class="row">
-	<h3>Novo Usuário</h3>
+	@if (Auth::check())
+		<h3>Editar usuário</h3>
+	@else
+		<h3>Novo Usuário</h3>
+	@endif
+	
 <p>In iaculis metus enim, at rhoncus magna egestas bibendum. Sed rutrum leo ac ex mattis, sed sagittis ligula imperdiet. Cras quis feugiat nibh, ut molestie erat. Nulla id arcu lobortis, porta eros non, suscipit ligula. Proin suscipit, metus eget porta rutrum, sem nisi rhoncus nibh, non accumsan nunc enim ac lorem.</p> 
 </div>
 
+<!--
+	Se tiver um usuário logado
+-->
 @if (Auth::check())
 	<div class="row container">
 	    <form class="col s12">
@@ -32,15 +40,27 @@
 		        <input class="file-path validate" type="text">
 		      </div>
 		   </div>
+		    <div class="row">
+	        <div class="input-field">
+	          <input id="password" type="oldpassword" class="validate">
+	          <label for="oldpassword">Senha Antiga</label>
+	        </div>
+	      </div>
 	      <div class="row">
 	        <div class="input-field">
 	          <input id="password" type="password" class="validate">
-	          <label for="password">Senha</label>
+	          <label for="password">Nova Senha</label>
 	        </div>
 	      </div>
 	      
 	 	</form>
  	</div>
+
+
+ 	
+ <!--
+ 	Caso contrário
+ -->
  @else
  	<div class="row container">
 	    <form class="col s12">
