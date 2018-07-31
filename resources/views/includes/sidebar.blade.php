@@ -1,6 +1,6 @@
 <aside>
 	@if (Auth::check())
-  		@if($user->isAdmin)
+  		@if(auth()->user()->isAdmin)
   			@include('includes/sidebar/sidebaradmin')
   		@else
   			@include('includes/sidebar/sidebaruser')
