@@ -3,8 +3,8 @@
 @section ('content')
 	@if (Auth::check())
         @php
-        $user = auth()->user()->name;
-        print "usuario $user";
+        $user = auth()->user();
+        print "usuario {{$user->name}}";
         @endphp
   		@if(auth()->user()->isAdmin)
            @php

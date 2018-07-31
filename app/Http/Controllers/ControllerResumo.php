@@ -9,7 +9,7 @@ class ControllerResumo extends Controller
 
 
     public function createForm(){
-        return view("forms/resumo");
+        return View::make("forms.resumo");
     }
 
     public function get(Request $req, int $id){

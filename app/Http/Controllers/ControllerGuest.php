@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ControllerAdmin extends Controller
+class ControllerGuest extends Controller
 {
 
 
     public function createForm(){
-        return view("home/guest");
+        return View::make("home.guest");
     }
 
 

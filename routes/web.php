@@ -15,6 +15,11 @@ Route::get('/', function () {
     return View::make('home');
 });
 
+//Cadastro Usuário
+Route::post('/login', 'ControllerUser@login');
+
+
+
 //usuarios
 //Route::get('/', 'ControllerUser@index');
 Route::post('resumo', 'ControllerResumo@createForm');
@@ -34,6 +39,10 @@ Route:: group(['prefix' => 'admin', 'midleware' =>'auth'], function(){
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

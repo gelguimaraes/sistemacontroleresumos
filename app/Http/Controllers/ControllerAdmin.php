@@ -9,7 +9,7 @@ class ControllerAdmin extends Controller
 
 
     public function createForm(){
-        return view("home/admin");
+        return View::make("home.admin");
     }
 
 

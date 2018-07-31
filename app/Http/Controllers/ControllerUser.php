@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ControllerResumo extends Controller
+class ControllerUser extends Controller
 {
 
 
@@ -32,5 +32,18 @@ class ControllerResumo extends Controller
 
     }
 
+   public function aluno()
+   {
+      return App/Aluno::where('id',$this->id);
+   }
 
+    public function register(){
+        $credenciais = Request::all(); 
+
+        if(User::create($credenciais)){
+            return "Usuario ". credenciais->input('nome ')."registrado com sucesso";
+        }
+
+        return "Usuario não cadastrado";
+    }
 }

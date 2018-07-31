@@ -23,7 +23,10 @@ class Aluno extends Model
 //        $this -> user_id = $user_id;
 //        $this->faculdade = $faculdade;
 //    }
-
+    public function get($value='')
+    {
+       return app\Aluno::where('id', value)->first()
+    }
     public function user(){
         return $this->morphOne(\App\User::class, 'userable');
     }
