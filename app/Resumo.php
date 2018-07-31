@@ -37,12 +37,8 @@ class Resumo extends Model
         return $this->hasOne('\App\Aluno','aluno_id','id');
     }
 
-    public function materia(){
-        return $this->hasOne('\App\Materia','materia_id','id');
-    }
-
     public function tema(){
-        return $this->hasOne('\App\Tema','tema_id','id');
+        return $this->belongsTo('\App\Tema','tema_id','id');
     }
 
 }

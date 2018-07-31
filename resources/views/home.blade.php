@@ -15,8 +15,9 @@
   		@else
             @php
             //print "é usuario";
+            //@include('includes/home/aluno')
             @endphp
-            @include('includes/home/aluno')
+
 
   		@endif
 	@else

@@ -18,6 +18,8 @@ class CreateTemasTable extends Migration
             $table->timestamps();
             $table->string('titulo');
             $table->string('descricao');
+            $table->integer('materia_id')->unsigned();
+            $table->foreign('materia_id')->references('id')->on('materias');
         });
     }
 

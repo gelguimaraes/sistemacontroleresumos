@@ -2,7 +2,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Guimarães/Souza">
 
-	<title>oi</title>
+	<title>Sistema de Cadastro de Tarefas</title>
 	 <!-- Css e Icones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

@@ -24,7 +24,11 @@ class Tema extends Model
     protected $fillable = ['titulo', 'descricao', 'id'];
 
     public function resumo(){
-        return $this->belongsTo('\App\Resumo','tema_id','id');
+        return $this->hasMany('\App\Resumo','tema_id','id');
+    }
+
+    public function materia(){
+        return $this->belongsTo('\App\Tema','tema_id','id');
     }
 
 

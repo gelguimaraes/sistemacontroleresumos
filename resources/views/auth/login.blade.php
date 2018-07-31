@@ -38,7 +38,7 @@
                                 <button type="submit" name="enter" value="foo" class="waves-effect waves-light btn center">
                                     <i class="material-icons left">input</i>Entrar
                                 </button>
-                                <button type="submit" name="newuser" value="foo" class="waves-effect waves-light btn center red darken-2">
+                                <button type="button" name="newuser" value="foo" class="waves-effect waves-light btn center red darken-2">
                                     <i class="material-icons left">person_add</i><a class="nav-link" href="{{ route('register') }}">Cadastre-se</a>
                                 </button>
                             </div>

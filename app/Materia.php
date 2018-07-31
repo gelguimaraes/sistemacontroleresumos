@@ -25,8 +25,10 @@ class Materia extends Model
         return $this->hasOne('\App\Turma','materia_id','id');
     }
 
-    public function resumo(){
-        return $this->belongsTo('\App\Resumo','materia_id','id');
+    public function tema(){
+        return $this->hasMany('\App\Tema','tema_id','id');
     }
+
+
 
 }

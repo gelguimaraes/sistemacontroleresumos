@@ -19,6 +19,7 @@ class CreateMateriasTable extends Migration
             $table->string('nome');
             $table->string('faculdade');
             $table->string('semestre');
+
         });
     }
 

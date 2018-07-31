@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Aluno;
+use View;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -80,7 +81,7 @@ class RegisterController extends Controller
             'user_id' => $user_id
         ];
         Aluno::create($dadosAluno);
-        return User::class ;
+        return User::class;
 
     }
 }
